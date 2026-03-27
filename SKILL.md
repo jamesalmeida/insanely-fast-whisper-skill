@@ -87,7 +87,7 @@ insanely-fast-whisper --file-name audio.mp3 --device-id mps --batch-size 24
 |------|---------|-------------|
 | `--file-name` | required | Path to audio file or URL |
 | `--device-id` | `0` (CUDA) | `mps` for Apple Silicon, `0` for Nvidia GPU, `cpu` for CPU-only |
-| `--model-name` | `openai/whisper-large-v3` | HuggingFace model name |
+| `--model-name` | `openai/whisper-large-v3` | HuggingFace model name — **use `distil-whisper/distil-medium.en` on Apple Silicon MPS to avoid memory issues** |
 | `--batch-size` | `24` | Batch size for processing (higher = faster on GPU) |
 | `--flash` | `False` | Enable Flash Attention 2 (requires flash-attn package) |
 | `--transcript-path` | `output.json` | Where to save the transcript JSON |
